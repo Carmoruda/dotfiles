@@ -63,6 +63,7 @@ bindsym F11 exec code
 
 # start firefox. See also
 # https://www.mozilla.org/en-US/firefox/new/
+bindsym $mod+w exec firefox
 bindsym F10 exec firefox
 
 # start file manager. See also
@@ -89,7 +90,7 @@ mode "$mode_system_management" {
         bindsym s exec --no-startup-id i3exit suspend, mode "default"
         bindsym h exec --no-startup-id i3exit hibernate, mode "default"
         bindsym r exec --no-startup-id i3exit reboot, mode "default"
-        bindsym Shift+s exec --no-startup-id i3exit shutdown, mode "default"
+        bindsym Shift+s exec --no-startup-id i3exit poweroff, mode "default"
 
         # back to normal: Enter or Escape or $mod+Pause
         bindsym Return mode "default"
@@ -145,7 +146,7 @@ bindsym $mod+f fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
 bindsym $mod+s layout stacking
-bindsym $mod+w layout tabbed
+bindsym $mod+t layout tabbed
 bindsym $mod+e layout toggle split
 
 # toggle tiling / floating
