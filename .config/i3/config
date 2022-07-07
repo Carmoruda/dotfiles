@@ -303,7 +303,7 @@ bindsym $mod+r mode "$mode_resize"
 default_border pixel 2
 
 # hiding borders adjacent to the screen edges
-hide_edge_borders smart
+##hide_edge_borders smart
 
 # draw borders only if there is more than one window in a workspace
 ##smart_borders on
