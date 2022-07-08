@@ -91,7 +91,13 @@ bindsym $mod+n exec thunar
 
 # lock screen with i3lock. See also
 # https://github.com/i3/i3lock
-bindsym $mod+Ctrl+l exec --no-startup-id /usr/bin/lock
+bindsym $mod+Ctrl+l exec --no-startup-id ~/.config/scripts/power_menu lock
+
+# open i3 config file
+bindsym F9 exec kitty code ~/.config/i3/config
+
+# toggle wifi
+bindsym F8 exec ~/.config/scripts/toggle_wifi
 
 # power management (i3lock is required)
 set $mode_system_management System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (Shift+s) shutdown
@@ -104,12 +110,12 @@ mode "$mode_system_management" {
         # Pressing h will hibernate the system.
         # Pressing r will reboot the system.
         # Pressing Shift+s will shutdown the system.
-        bindsym l exec --no-startup-id /usr/bin/lock, mode "default"
-        bindsym e exec --no-startup-id i3-msg exit, mode "default"
-        bindsym s exec --no-startup-id systemctl suspend, mode "default"
-        bindsym h exec --no-startup-id systemctl hibernate, mode "default"
-        bindsym r exec --no-startup-id systemctl reboot, mode "default"
-        bindsym Shift+s exec --no-startup-id systemctl poweroff, mode "default"
+        bindsym l exec --no-startup-id ~/.config/scripts/power_menu lock, mode "default"
+        bindsym e exec --no-startup-id ~/.config/scripts/power_menu logout, mode "default"
+        bindsym s exec --no-startup-id ~/.config/scripts/power_menu suspend, mode "default"
+        bindsym h exec --no-startup-id ~/.config/scripts/power_menu hibernate, mode "default"
+        bindsym r exec --no-startup-id ~/.config/scripts/power_menu reboot, mode "default"
+        bindsym Shift+s exec --no-startup-id ~/.config/scripts/power_menu shutdown, mode "default"
 
         # back to normal: Enter or Escape or $mod+Pause
         bindsym Return mode "default"
