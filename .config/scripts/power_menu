@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 lock() {
-    ~/.config/bin/lock
+    ~/.config/scripts/lock
 }
 
 case "$1" in
