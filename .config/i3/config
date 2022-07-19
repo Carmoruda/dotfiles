@@ -129,12 +129,46 @@ bindsym $mod+Pause mode "$mode_system_management"
 bindsym $mod+Shift+q kill
 
 # start rofi (Window switcher, run dialog, ssh-launcher and dmenu replacement)
-bindsym $mod+d exec --no-startup-id rofi -show drun
-# A more modern dmenu replacement is rofi:
-# bindcode $mod+40 exec "rofi -modi drun,run -show drun"
+bindsym $mod+d exec "rofi -show drun -no-default-config -config ~/.config/rofi/config.rasi"
+##bindcode $mod+40 exec "rofi -modi drun,run -show drun"
+
+# rofi applets(rofi is required)
+set $mode_rofi_applets Applets (a) apps, (b) backlight, (Shift+b) battery, (m) music, (n) network, (p) powermenu, (q) quicklinks, (s) screenshot, (t) time, (v) volume
+mode "$mode_rofi_applets" {
+        # These bindings trigger as soon as you enter the system management mode
+
+        # Pressing a will show the shortcuts for most used apps.
+        # Pressing b will display and allow screen brightness adjustment.
+        # Pressing Shift+b will diplay battery percentage & charging-discharging status.
+        # Pressing m will allow to control the song play throught dunst.
+        # Pressing n will display online-offline status.
+        # Pressing p will display a classic powermenu.
+        # Pressing q will show a list of bookmarks schortcuts for most used sites.
+        # Pressing s will take a screenshot using scrot.
+        # Pressing t will display the current time, day & date.
+        # Pressing v will display and allow volume adjustment.
+        bindsym a exec --no-startup-id ~/.config/scripts/applets_menu apps, mode "default"
+        bindsym b exec --no-startup-id ~/.config/scripts/applets_menu backlight, mode "default"
+        bindsym Shift+b exec --no-startup-id ~/.config/scripts/applets_menu battery, mode "default"
+        bindsym m exec --no-startup-id ~/.config/scripts/applets_menu music, mode "default"
+        bindsym n exec --no-startup-id ~/.config/scripts/applets_menu network, mode "default"
+        bindsym p exec --no-startup-id ~/.config/scripts/applets_menu powermenu, mode "default"
+        bindsym q exec --no-startup-id ~/.config/scripts/applets_menu quicklinks, mode "default"
+        bindsym s exec --no-startup-id ~/.config/scripts/applets_menu screenshot, mode "default"
+        bindsym t exec --no-startup-id ~/.config/scripts/applets_menu time_date, mode "default"
+        bindsym v exec --no-startup-id ~/.config/scripts/applets_menu volume, mode "default"
+
+        # back to normal: Enter or Escape or $mod+Pause
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+        bindsym $mod+Fn+a mode "default"
+}
+
+bindsym $mod+Shift+a mode "$mode_rofi_applets"
+
 # There also is i3-dmenu-desktop which only displays applications shipping a
 # .desktop file. It is a wrapper around dmenu, so you need that installed.
-# bindcode $mod+40 exec --no-startup-id i3-dmenu-desktop
+##bindcode $mod+40 exec --no-startup-id i3-dmenu-desktop
 
 # change focus
 bindsym $mod+j focus left
