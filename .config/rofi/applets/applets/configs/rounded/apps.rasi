@@ -9,7 +9,7 @@
 
 configuration {
     show-icons:                     false;
-	font:                      		"Comfortaa 12";
+	font:                      		"Source Pro Code 12";
     disable-history:                false;
 	sidebar-mode: 					false;
 }
@@ -22,7 +22,7 @@ configuration {
 }
 
 window {
-    transparency:                   "real";
+    /* transparency:                   "real"; */
     border-radius:                  12px;
     location:                       southeast;
 	width:							500px;

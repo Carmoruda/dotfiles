@@ -1,38 +1,31 @@
 #!/usr/bin/env bash
 
-## Author  : Aditya Shakya
-## Mail    : adi1090x@gmail.com
-## Github  : @adi1090x
-## Twitter : @adi1090x
-
 style="$($HOME/.config/rofi/applets/applets/style.sh)"
 
 dir="$HOME/.config/rofi/applets/applets/configs/$style"
 rofi_command="rofi -theme $dir/battery.rasi"
+battery_path="/sys/class/power_supply/BAT1"
 
 ## Get data
-BATTERY="$(acpi | awk -F ' ' '{print $4}' | tr -d \%,)"
-CHARGE="$(acpi | awk -F ' ' '{print $3}' | tr -d \,)"
+BATTERY="$(cat /sys/class/power_supply/BAT1/capacity)"
+STATUS="$(cat /sys/class/power_supply/BAT1/status)"
 
 active=""
 urgent=""
 
-if [[ $CHARGE = *"Charging"* ]]; then
-    active="-a 1"
-    ICON_CHRG=""
-    MSG=$CHARGE
-elif [[ $CHARGE = *"Full"* ]]; then
-    active="-u 1"
-    ICON_CHRG=""
-    MSG=$CHARGE
+if [[ $STATUS = *"Charging"* ]]; then
+    ICON_CHRG=""
+    MSG=$BATTERY
+elif [[ $STATUS = *"Full"* ]]; then
+    ICON_CHRG=""
+    MSG=$BATTERY
 else
-    urgent="-u 1"
-    ICON_CHRG=""
+    ICON_CHRG=""
     MSG=$CHARGE
 fi
 
 # Discharging
-#if [[ $CHARGE -eq 1 ]] && [[ $BATTERY -eq 100 ]]; then
+#if [[ $CHARGE -eq 1 ]] && [[ $STATUS -eq 100 ]]; then
 #    ICON_DISCHRG=""
 if [[ $BATTERY -ge 5 ]] && [[ $BATTERY -le 19 ]]; then
     ICON_DISCHRG=""
@@ -47,7 +40,7 @@ elif [[ $BATTERY -ge 80 ]] && [[ $BATTERY -le 100 ]]; then
 fi
 
 ## Icons
-ICON_PMGR=""
+ICON_PMGR=""
 
 options="$ICON_DISCHRG\n$ICON_CHRG\n$ICON_PMGR"
 
