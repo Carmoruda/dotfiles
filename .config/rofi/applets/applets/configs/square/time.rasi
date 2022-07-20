@@ -1,15 +1,6 @@
-/*
- *
- * Author  : Aditya Shakya
- * Mail    : adi1090x@gmail.com
- * Github  : @adi1090x
- * Twitter : @adi1090x
- *
- */
-
 configuration {
     show-icons:                     false;
-	font:                      		"Comfortaa 12";
+	font:                      		"Source Code Pro 12";
     disable-history:                false;
 	sidebar-mode: 					false;
 }
@@ -42,7 +33,7 @@ prompt {
 
 textbox-prompt-colon {
 	expand: 						false;
-	str: 							" Time ";
+	str: 							"  ";
 	background-color: 				@accent;
 	text-color: 					@background;
     padding:                        12px 10px 0px 10px;
@@ -88,7 +79,7 @@ element {
 element-text {
     background-color: 				inherit;
     text-color:       				inherit;
-	font:							"Hurmit Nerd Font Mono 32";
+	font:							"Source Code Pro 32";
     expand:                         true;
     horizontal-align:               0.5;
     vertical-align:                 0.5;

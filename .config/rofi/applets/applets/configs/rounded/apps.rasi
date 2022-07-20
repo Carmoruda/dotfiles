@@ -1,15 +1,6 @@
-/*
- *
- * Author  : Aditya Shakya
- * Mail    : adi1090x@gmail.com
- * Github  : @adi1090x
- * Twitter : @adi1090x
- *
- */
-
 configuration {
     show-icons:                     false;
-	font:                      		"Source Pro Code 12";
+	font:                      		"Source Code Pro 12";
     disable-history:                false;
 	sidebar-mode: 					false;
 }
@@ -22,36 +13,35 @@ configuration {
 }
 
 window {
-    /* transparency:                   "real"; */
+    transparency:                   "real";
     border-radius:                  12px;
-    location:                       southeast;
-	width:							500px;
+    width:                          100px;
+    location:                       east;
     x-offset:                       -15px;
-    y-offset:                       -45px;
+    y-offset:                       0px;
 }
 
-prompt {
+/*prompt {
     enabled: 						true;
     padding:                        10px;
 	background-color: 				@background-light;
 	text-color: 					@accent;
-    border:                  		0px 2px 0px 2px;
-    border-radius:                  10px;
+    border:                  		2px 2px 2px 2px;
+    border-radius:                  0px;
     border-color:                  	@accent;
-}
+}*/
 
-textbox-prompt-colon {
+/*textbox-prompt-colon {
 	expand: 						false;
 	str: 							" Apps ";
 	background-color: 				@accent;
 	text-color: 					@background;
-    padding:                        10px 10px 0px 10px;
-    border-radius:                  10px;
-}
+    padding:                        12px 10px 0px 10px;
+}*/
 
-inputbar {
+/*inputbar {
 	children: 						[ textbox-prompt-colon, prompt ];
-    spacing:                        12px;
+    spacing:                        0px;
     background-color:               @background;
     text-color:                     @foreground;
     expand:                         false;
@@ -61,12 +51,12 @@ inputbar {
     margin:                         0px 0px 0px 0px;
     padding:                        0px;
     position:                       center;
-}
+}*/
 
 listview {
-    columns:						6;
-    lines:							1;
-    spacing:                        12px;
+    lines:						    6;
+    columns:						1;
+    spacing:                        8px;
     cycle:                          true;
     dynamic:                        true;
     layout:                         vertical;
@@ -74,7 +64,7 @@ listview {
 
 mainbox {
     background-color:               @background;
-    children:                       [ inputbar, listview ];
+    children:                       [listview]; /*[ inputbar, listview ];*/
     spacing:                        12px;
     margin:                         12px;
 }
@@ -89,18 +79,18 @@ element {
 element-text {
     background-color: 				inherit;
     text-color:       				inherit;
-	font:							"feather 20";
+	font:							"feather 25";
     expand:                         true;
     horizontal-align:               0.5;
     vertical-align:                 0.5;
-    margin:                         19px 10px 19px 10px;
+    margin:                         16px 8px 16px 8px;
 }
 
 element normal.urgent,
 element alternate.urgent {
     background-color:               @off;
     text-color:                     @background;
-    border-radius:                  12px;
+    border-radius:                  10px;
 }
 
 element normal.active,
@@ -110,11 +100,11 @@ element alternate.active {
 }
 
 element selected {
-    background-color:               @background-light;
-    text-color:                     @accent;
-    border:                  		0px 2px 0px 2px;
-    border-radius:                  12px;
-    border-color:                  	@accent;
+    background-color:               @accent;
+    text-color:                     @background;
+    border:                  		0px;
+    border-radius:                  10px;
+    border-color:                  	@border;
 }
 
 element selected.urgent {

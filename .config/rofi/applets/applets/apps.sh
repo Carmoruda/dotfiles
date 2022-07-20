@@ -6,10 +6,10 @@ dir="$HOME/.config/rofi/applets/applets/configs/$style"
 rofi_command="rofi -theme $dir/apps.rasi"
 
 # Links
-terminal=""
+terminal=""
 files=""
 editor=""
-browser=""
+browser=""
 music=""
 settings=""
 

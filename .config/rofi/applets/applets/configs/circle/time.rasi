@@ -1,15 +1,6 @@
-/*
- *
- * Author  : Aditya Shakya
- * Mail    : adi1090x@gmail.com
- * Github  : @adi1090x
- * Twitter : @adi1090x
- *
- */
-
 configuration {
     show-icons:                     false;
-	font:                      		"Comfortaa 12";
+	font:                      		"Source Code Pro 12";
     disable-history:                false;
 	sidebar-mode: 					false;
 }
@@ -23,7 +14,7 @@ configuration {
 
 window {
     transparency:                   "real";
-    border-radius:                  40px;
+    border-radius:                  12px;
     location:                       southeast;
 	width:							450px;
     x-offset:                       -15px;
@@ -36,22 +27,22 @@ prompt {
 	background-color: 				@background-light;
 	text-color: 					@accent;
     border:                  		0px 0px 2px 0px;
-    border-radius:                  25px;
+    border-radius:                  0px 25px 25px 0px;
     border-color:                  	@accent;
 }
 
 textbox-prompt-colon {
 	expand: 						false;
-	str: 							" Time ";
+	str: 							"  ";
 	background-color: 				@accent;
 	text-color: 					@background;
     padding:                        12px 10px 0px 10px;
-    border-radius:                  25px;
+    border-radius:                  25px 0px 0px 25px;
 }
 
 inputbar {
 	children: 						[ textbox-prompt-colon, prompt ];
-    spacing:                        12px;
+    spacing:                        0px;
     background-color:               @background;
     text-color:                     @foreground;
     expand:                         false;
@@ -89,7 +80,7 @@ element {
 element-text {
     background-color: 				inherit;
     text-color:       				inherit;
-	font:							"Hurmit Nerd Font Mono 32";
+	font:							"Source Code Pro 32";
     expand:                         true;
     horizontal-align:               0.5;
     vertical-align:                 0.5;

@@ -1,10 +1,5 @@
 #!/usr/bin/env bash
 
-## Author  : Aditya Shakya
-## Mail    : adi1090x@gmail.com
-## Github  : @adi1090x
-## Twitter : @adi1090x
-
 style="$($HOME/.config/rofi/applets/applets/style.sh)"
 
 dir="$HOME/.config/rofi/applets/applets/configs/$style"
@@ -16,35 +11,36 @@ msg() {
 }
 
 # Browser
-if [[ -f /usr/bin/firefox ]]; then
-	app="firefox"
-elif [[ -f /usr/bin/chromium ]]; then
-	app="chromium"
-elif [[ -f /usr/bin/midori ]]; then
-	app="midori"
-else
-	msg "No suitable web browser found!"
-	exit 1
-fi
+app="firefox"
 
 # Links
-google=""
-facebook=""
-twitter=""
-github=""
-mail=""
-youtube=""
+duckduckgo=""
+twitch=""
+twitter=""
+github=""
+reddit=""
+youtube=""
+
+# Search
+search_duckduckgo() {
+	rofi -dmenu\
+		-i\
+		-no-fixed-num-lines\
+		-p "Search : "\
+		-theme $HOME/.config/rofi/applets/styles/confirm.rasi
+}
 
 # Variable passed to rofi
-options="$google\n$facebook\n$twitter\n$github\n$mail\n$youtube"
+options="$duckduckgo\n$youtube\n$twitch\n$twitter\n$github\n$reddit"
 
 chosen="$(echo -e "$options" | $rofi_command -p "Open In  :  $app" -dmenu -selected-row 0)"
 case $chosen in
-    $google)
-        $app https://www.google.com &
+    $duckduckgo)
+        ans=$(search_duckduckgo)
+        $app "https://www.duckduckgo.com/?q=$ans" &
         ;;
-    $facebook)
-        $app https://www.facebook.com &
+    $twitch)
+        $app https://www.twitch.com &
         ;;
     $twitter)
         $app https://www.twitter.com &
@@ -52,8 +48,8 @@ case $chosen in
     $github)
         $app https://www.github.com &
         ;;
-    $mail)
-        $app https://www.gmail.com &
+    $reddit)
+        $app https://www.reddit.com &
         ;;
     $youtube)
         $app https://www.youtube.com &

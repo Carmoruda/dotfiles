@@ -14,13 +14,13 @@ active=""
 urgent=""
 
 if [[ $STATUS = *"Charging"* ]]; then
-    ICON_CHRG=""
+    ICON_CHRG=""
     MSG=$BATTERY
 elif [[ $STATUS = *"Full"* ]]; then
-    ICON_CHRG=""
+    ICON_CHRG=""
     MSG=$BATTERY
 else
-    ICON_CHRG=""
+    ICON_CHRG=" ﮤ "
     MSG=$CHARGE
 fi
 
@@ -28,15 +28,17 @@ fi
 #if [[ $CHARGE -eq 1 ]] && [[ $STATUS -eq 100 ]]; then
 #    ICON_DISCHRG=""
 if [[ $BATTERY -ge 5 ]] && [[ $BATTERY -le 19 ]]; then
-    ICON_DISCHRG=""
+    ICON_DISCHRG=""
 elif [[ $BATTERY -ge 20 ]] && [[ $BATTERY -le 39 ]]; then
-    ICON_DISCHRG=""
+    ICON_DISCHRG=""
 elif [[ $BATTERY -ge 40 ]] && [[ $BATTERY -le 59 ]]; then
-    ICON_DISCHRG=""
+    ICON_DISCHRG=""
 elif [[ $BATTERY -ge 60 ]] && [[ $BATTERY -le 79 ]]; then
-    ICON_DISCHRG=""
-elif [[ $BATTERY -ge 80 ]] && [[ $BATTERY -le 100 ]]; then
-    ICON_DISCHRG=""
+    ICON_DISCHRG=""
+elif [[ $BATTERY -ge 80 ]] && [[ $BATTERY -le 99 ]]; then
+    ICON_DISCHRG=""
+elif [[ $BATTERY -ge 100 ]]; then
+    ICON_DISCHRG=""
 fi
 
 ## Icons

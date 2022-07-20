@@ -1,78 +1,89 @@
 #!/usr/bin/env bash
 
-## Author  : Aditya Shakya
-## Mail    : adi1090x@gmail.com
-## Github  : @adi1090x
-## Twitter : @adi1090x
-
 style="$($HOME/.config/rofi/applets/applets/style.sh)"
 
 dir="$HOME/.config/rofi/applets/applets/configs/$style"
 rofi_command="rofi -theme $dir/mpd.rasi"
 
-# Gets the current status of mpd (for us to parse it later on)
-status="$(mpc status)"
+# Gets the current status of playerctl (for us to parse it later on)
+playing_status="$(playerctl status)"
+loop_status="$(playerctl loop)"
+shuffle_status="$(playerctl shuffle)"
+
 # Defines the Play / Pause option content
-if [[ $status == *"[playing]"* ]]; then
-    play_pause=""
+if [[ $playing_status == *"Playing"* ]]; then
+    play_pause=""
 else
-    play_pause=""
+    play_pause=""
 fi
 active=""
 urgent=""
 
-# Display if repeat mode is on / off
-tog_repeat=""
-if [[ $status == *"repeat: on"* ]]; then
+# Display if loop mode is on / off
+tog_loop=""
+if [[ $loop_status == *"Playlist"* ]]; then
+    loop_toggle="Track"
+    tog_loop="凌"
     active="-a 4"
-elif [[ $status == *"repeat: off"* ]]; then
+elif [[ $loop_status == *"Track"* ]]; then
+    loop_toggle="None"
+    tog_loop="綾"
+    active="-a 4"
+elif [[ $loop_status == *"None"* ]]; then
+    loop_toggle="Playlist"
+    tog_loop="稜"
     urgent="-u 4"
 else
-    tog_repeat=" Parsing error"
+    tog_loop="稜"
 fi
 
-# Display if random mode is on / off
-tog_random=""
-if [[ $status == *"random: on"* ]]; then
+# Display if shuffle mode is on / off
+tog_shuffle="咽"
+if [[ $shuffle_status == *"On"* ]]; then
+    shuffle_toggle="Off"
     [ -n "$active" ] && active+=",5" || active="-a 5"
-elif [[ $status == *"random: off"* ]]; then
+
+elif [[ $shuffle_status == *"Off"* ]]; then
+    shuffle_toggle="On"
+    tog_shuffle="劣"
     [ -n "$urgent" ] && urgent+=",5" || urgent="-u 5"
 else
-    tog_random=" Parsing error"
+    tog_shuffle="劣"
 fi
-stop=""
-next=""
-previous=""
+stop=""
+next=""
+previous=""
+
 
 # Variable passed to rofi
-options="$previous\n$play_pause\n$stop\n$next\n$tog_repeat\n$tog_random"
+options="$previous\n$play_pause\n$stop\n$next\n$tog_loop\n$tog_shuffle"
 
 # Get the current playing song
-current=$(mpc -f "%title%" current)
-# If mpd isn't running it will return an empty string, we don't want to display that
+current=$(playerctl metadata title)
+# If playerctl isn't running it will return an empty string, we don't want to display that
 if [[ -z "$current" ]]; then
     current="-"
 fi
 
-# Spawn the mpd menu with the "Play / Pause" entry selected by default
+# Spawn the playerctl menu with the "Play / Pause" entry selected by default
 chosen="$(echo -e "$options" | $rofi_command -p "  $current" -dmenu $active $urgent -selected-row 1)"
 case $chosen in
     $previous)
-        mpc -q prev && notify-send -u low -t 1800 " $(mpc current)"
+        playerctl previous && notify-send -u low -t 1800 " Previous track "
         ;;
     $play_pause)
-        mpc -q toggle && notify-send -u low -t 1800 " $(mpc current)"
+        playerctl play-pause && notify-send -u low -t 1800 " $(playerctl metadata title) by $(playerctl metadata artist)"
         ;;
     $stop)
-        mpc -q stop
+        playerctl stop
         ;;
     $next)
-        mpc -q next && notify-send -u low -t 1800 " $(mpc current)"
+        playerctl next && notify-send -u low -t 1800 " Next track "
         ;;
-    $tog_repeat)
-        mpc -q repeat
+    $tog_loop)
+        playerctl loop $loop_toggle && notify-send -u low -t 1800 " Loop set to: $loop_toggle " " $(playerctl metadata title) by $(playerctl metadata artist)"
         ;;
-    $tog_random)
-        mpc -q random
+    $tog_shuffle)
+        playerctl shuffle $shuffle_toggle && notify-send -u low -t 1800 " Shuffle $shuffle_toggle " " $(playerctl metadata title) by $(playerctl metadata artist)"
         ;;
 esac

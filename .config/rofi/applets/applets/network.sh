@@ -1,10 +1,5 @@
 #!/usr/bin/env bash
 
-## Author  : Aditya Shakya
-## Mail    : adi1090x@gmail.com
-## Github  : @adi1090x
-## Twitter : @adi1090x
-
 style="$($HOME/.config/rofi/applets/applets/style.sh)"
 
 dir="$HOME/.config/rofi/applets/applets/configs/$style"
@@ -23,25 +18,25 @@ urgent=""
 if (ping -c 1 archlinux.org || ping -c 1 google.com || ping -c 1 bitbucket.org || ping -c 1 github.com || ping -c 1 sourceforge.net) &>/dev/null; then
 	if [[ $STATUS == *"enable"* ]]; then
         if [[ $IFACE == e* ]]; then
-            connected=""
+            connected="睊"
         else
-            connected=""
+            connected="直"
         fi
 	active="-a 0"
-	SSID="﬉ $(iwgetid -r)"
+	SSID="$(iwgetid -r)"
 	PIP="$(wget --timeout=30 http://ipinfo.io/ip -qO -)"
 	fi
 else
     urgent="-u 0"
     SSID="Disconnected"
     PIP="Not Available"
-    connected=""
+    connected="睊"
 fi
 
 ## Icons
-bmon=""
-launch_cli=""
-launch=""
+bmon=""
+launch_cli=""
+launch=""
 
 options="$connected\n$bmon\n$launch_cli\n$launch"
 
@@ -53,13 +48,13 @@ case $chosen in
 			nmcli radio wifi off
 		else
 			nmcli radio wifi on
-		fi 
+		fi
         ;;
     $bmon)
-        termite -e bmon
+        kitty bmon
         ;;
     $launch_cli)
-        termite -e nmtui
+        kitty nmtui
         ;;
     $launch)
         nm-connection-editor

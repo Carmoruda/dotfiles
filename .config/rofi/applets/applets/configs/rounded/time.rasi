@@ -1,15 +1,6 @@
-/*
- *
- * Author  : Aditya Shakya
- * Mail    : adi1090x@gmail.com
- * Github  : @adi1090x
- * Twitter : @adi1090x
- *
- */
-
 configuration {
     show-icons:                     false;
-	font:                      		"Comfortaa 12";
+	font:                      		"Source Code Pro 12";
     disable-history:                false;
 	sidebar-mode: 					false;
 }
@@ -35,28 +26,27 @@ prompt {
     padding:                        10px;
 	background-color: 				@background-light;
 	text-color: 					@accent;
-    border:                  		0px 2px 0px 2px;
-    border-radius:                  10px;
+    border:                  		2px 2px 3px 2px;
+    border-radius:                  0px 12px 12px 0px;
     border-color:                  	@accent;
 }
 
 textbox-prompt-colon {
 	expand: 						false;
-	str: 							" Time ";
+	str: 							"  ";
 	background-color: 				@accent;
 	text-color: 					@background;
-    padding:                        10px 10px 0px 10px;
-    border-radius:                  10px;
+    padding:                        12px 10px 0px 10px;
 }
 
 inputbar {
 	children: 						[ textbox-prompt-colon, prompt ];
-    spacing:                        12px;
+    spacing:                        0px;
     background-color:               @background;
     text-color:                     @foreground;
     expand:                         false;
     border:                  		0px;
-    border-radius:                  0px;
+    border-radius:                  12px;
     border-color:                  	@accent;
     margin:                         0px 0px 0px 0px;
     padding:                        0px;
@@ -89,7 +79,7 @@ element {
 element-text {
     background-color: 				inherit;
     text-color:       				inherit;
-	font:							"Hurmit Nerd Font Mono 32";
+	font:							"Source Code Pro 32";
     expand:                         true;
     horizontal-align:               0.5;
     vertical-align:                 0.5;
@@ -100,7 +90,7 @@ element normal.urgent,
 element alternate.urgent {
     background-color:               @off;
     text-color:                     @background;
-    border-radius:                  12px;
+    border-radius:                  10px;
 }
 
 element normal.active,
@@ -110,11 +100,11 @@ element alternate.active {
 }
 
 element selected {
-    background-color:               @background-light;
-    text-color:                     @accent;
-    border:                  		0px 2px 0px 2px;
-    border-radius:                  12px;
-    border-color:                  	@accent;
+    background-color:               @accent;
+    text-color:                     @background;
+    border:                  		0px;
+    border-radius:                  10px;
+    border-color:                  	@border;
 }
 
 element selected.urgent {
