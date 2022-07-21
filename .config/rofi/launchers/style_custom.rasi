@@ -6,20 +6,21 @@
  */
 
 configuration {
-    font: 							"Iosevka Nerd Font 12";
+    font: 							"Source Code Pro 10";
     fixed-num-lines: 				true;
-    show-icons: 					false;
+    show-icons: 					true;
+    icon-theme: 					"Papirus-Dark";
     sidebar-mode: 					true;
     scroll-method: 					0;
-    window-format: 					"[{w}] ··· {c} ···   {t}";
-    click-to-exit: 					true;
+    window-format: 					" {t}";
+    click-to-exit: 					false;
     combi-hide-mode-prefix: 		false;
-    display-window: 				"";
+    display-window: 				"";
     display-windowcd: 				"";
-    display-run: 					"";
-    display-ssh: 					"";
-    display-drun: 					"";
-    display-combi: 					"";
+    display-run: 					"";
+    display-ssh: 					"力";
+    display-drun: 					"";
+    display-combi: 					"";
 }
 
 @import "styles/colors.rasi"
@@ -31,10 +32,10 @@ configuration {
 window {
     border: 						0px;
     border-color: 					@ac;
-    border-radius: 					0px;
-    padding: 						300px;
-    width: 							100%;
-    height: 						100%;
+    border-radius: 					6px;
+    padding: 						8;
+    width: 							20%;
+    height: 						40%;
 }
 
 prompt {
@@ -74,14 +75,14 @@ mainbox {
 }
 
 listview {
-    lines:							5;
-    columns:						3;
+    lines:							6;
+    columns:						1;
     fixed-height: 					0;
     border: 						0px;
     border-color: 					@ac;
-    spacing: 						5px;
+    spacing: 						4px;
     scrollbar: 						false;
-    padding: 						25px 5px -20px 5px;
+    padding: 						5px 5px 0px 5px;
 }
 
 element-text, element-icon {
@@ -90,9 +91,9 @@ element-text, element-icon {
 }
 
 element {
-    border: 						4px;
+    border: 						0px;
     border-radius: 					4px;
-    padding: 						15px;
+    padding: 						5px;
 }
 element normal.normal {
     background-color: 				@bg;
@@ -103,23 +104,20 @@ element normal.urgent {
     text-color:       				@red;
 }
 element normal.active {
-    background-color: 				@bg;
-    text-color:       				@fg;
-    border-color: 					@green;
+    background-color: 				@green;
+    text-color:       				@bg;
 }
 element selected.normal {
-    background-color: 				@bg;
+    background-color: 				@se;
     text-color:       				@fg;
-    border-color: 					@fg;
 }
 element selected.urgent {
     background-color: 				@bg;
     text-color:       				@red;
 }
 element selected.active {
-    background-color: 				@bg;
-    text-color:       				@fg;
-    border-color: 					@fg;
+    background-color: 				@fg;
+    text-color:       				@bg;
 }
 element alternate.normal {
     background-color: 				@bg;
@@ -145,25 +143,26 @@ button {
     vertical-align:                 0.5;
     background-color:             	@se;
     margin: 						5px;
-    padding: 						15px;
+    padding: 						5px;
     text-color: 					@fg;
     border: 						0px;
     border-radius: 					4px;
-    border-color: 					@fg;
+    border-color: 					@se;
+    font: 						    "Source Code Pro 12";
 }
 
 button selected {
-    background-color:             	@bg;
-    text-color: 					@fg;
-    border: 						4px;
+    background-color:             	@blue;
+    text-color: 					@bg;
+    border: 						0px;
     border-radius: 					4px;
-    border-color: 					@fg;
+    border-color: 					@se;
 }
 
 scrollbar {
     width:        					4px;
     border:       					0px;
-    handle-color: 					@fg;
+    handle-color: 					@se;
     handle-width: 					8px;
     padding:      					0;
 }
