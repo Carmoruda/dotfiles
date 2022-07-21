@@ -129,11 +129,11 @@ bindsym $mod+Pause mode "$mode_system_management"
 bindsym $mod+Shift+q kill
 
 # start rofi (Window switcher, run dialog, ssh-launcher and dmenu replacement)
-bindsym $mod+d exec "rofi -show drun -no-default-config -config ~/.config/rofi/config.rasi"
+bindsym $mod+d exec ~/.config/rofi/launchers/launcher.sh
 ##bindcode $mod+40 exec "rofi -modi drun,run -show drun"
 
 # rofi applets(rofi is required)
-set $mode_rofi_applets Applets (a) apps, (b) backlight, (Shift+b) battery, (m) music, (n) network, (p) powermenu, (q) quicklinks, (s) screenshot, (t) time, (v) volume
+set $mode_rofi_applets Applets (a) apps, (b) backlight, (m) music, (n) network, (p) powermenu, (q) quicklinks, (s) screenshot
 mode "$mode_rofi_applets" {
         # These bindings trigger as soon as you enter the system management mode
 
@@ -149,14 +149,14 @@ mode "$mode_rofi_applets" {
         # Pressing v will display and allow volume adjustment.
         bindsym a exec --no-startup-id ~/.config/scripts/applets_menu apps, mode "default"
         bindsym b exec --no-startup-id ~/.config/scripts/applets_menu backlight, mode "default"
-        bindsym Shift+b exec --no-startup-id ~/.config/scripts/applets_menu battery, mode "default"
+        ##bindsym Shift+b exec --no-startup-id ~/.config/scripts/applets_menu battery, mode "default"
         bindsym m exec --no-startup-id ~/.config/scripts/applets_menu music, mode "default"
         bindsym n exec --no-startup-id ~/.config/scripts/applets_menu network, mode "default"
         bindsym p exec --no-startup-id ~/.config/scripts/applets_menu powermenu, mode "default"
         bindsym q exec --no-startup-id ~/.config/scripts/applets_menu quicklinks, mode "default"
         bindsym s exec --no-startup-id ~/.config/scripts/applets_menu screenshot, mode "default"
-        bindsym t exec --no-startup-id ~/.config/scripts/applets_menu time_date, mode "default"
-        bindsym v exec --no-startup-id ~/.config/scripts/applets_menu volume, mode "default"
+        ##bindsym t exec --no-startup-id ~/.config/scripts/applets_menu time_date, mode "default"
+        ##bindsym v exec --no-startup-id ~/.config/scripts/applets_menu volume, mode "default"
 
         # back to normal: Enter or Escape or $mod+Pause
         bindsym Return mode "default"
