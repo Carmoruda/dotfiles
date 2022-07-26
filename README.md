@@ -1,5 +1,5 @@
 <h1 align="center">
-  Carmoruda Dotfiles 
+  Carmoruda Dotfiles
  </h1>
 
 <p align="center">
@@ -15,21 +15,60 @@
   <img alt="Github repo license" src="https://img.shields.io/github/license/carmoruda/dotfiles?color=15121C&labelColor=202328&style=for-the-badge">
 </div>
 
-## 🌟 Showcase
-## ℹ️ Info
+## :satellite: Index
 
-| Program                  | Name                                                                                            |
-| ------------------------ | ----------------------------------------------------------------------------------------------- |
-| **Window Manager**       | [i3](https://github.com/i3/i3)                                                                  |
-| **Terminal Emulator**    | [Kitty](https://github.com/kovidgoyal/kitty)                                                    |
-| **Bar**                  | [Polybar](https://github.com/polybar/polybar)                                                   |
-| **Application Launcher** | [Rofi](https://github.com/davatorium/rofi)                                                      |
-| **Notification Daemon**  | [Dunst](https://github.com/dunst-project/dunst)                                                 |
-| **Display Manager**      | [GDM](https://gitlab.gnome.org/GNOME/gdm)                                                       |
-| **Lockscreen**           | [i3lock](https://github.com/i3/i3lock)                                                          |
-| **Compositor**           | [Picom](https://github.com/yshui/picom)                                                         |
-| **Shell**                | [Bash](https://www.gnu.org/software/bash/)                                                      |
-| **Text Editor**          | [Visual Studio Code](https://github.com/Microsoft/vscode), [Nano](https://www.nano-editor.org/) |
-| **File Manager**         | [Thunar](https://gitlab.xfce.org/xfce/thunar)                                                   |
-| **Icons**                | [Papirus Dark](https://github.com/PapirusDevelopmentTeam/papirus-icon-theme)                    |
+- [:satellite: Index](#satellite-index)
+- [:notebook_with_decorative_cover: Wiki](#notebook_with_decorative_cover-wiki)
+- [:gear: Config files](#gear-config-files)
+- [:memo: Fonts](#memo-fonts)
+- [:art: Colorscheme](#art-colorscheme)
+- [:wave: Gallery](#wave-gallery)
+- [:check-mark: TODOs](#check-mark-todos)
 
+## [:notebook_with_decorative_cover: Wiki](https://github.com/Carmoruda/dotfiles/wiki)
+
+The wiki will guide you to replicate my dotfiles. Read the manual and follow the steps. If you need help do not hesitate to ask.
+
+## :gear: Config files
+
+| Program                                | Name                                                                                            |
+| -------------------------------------- | ----------------------------------------------------------------------------------------------- |
+| :penguin: **OS**                       | [Endeavour OS](https://endeavouros.com/)                                                        |
+| :art: **Color Scheme**                 | [Queenhub](#art-colorscheme)                                                                    |
+| :rocket: **Window Manager**            | [i3](https://github.com/i3/i3)                                                                  |
+| :keyboard: **Terminal Emulator**       | [Kitty](https://github.com/kovidgoyal/kitty)                                                    |
+| :construction: **Bar**                 | [Polybar](https://github.com/polybar/polybar)                                                   |
+| :floppy_disk: **Application Launcher** | [Rofi](https://github.com/davatorium/rofi)                                                      |
+| :mega: **Notification Daemon**         | [Dunst](https://github.com/dunst-project/dunst)                                                 |
+| :key: **Display Manager**              | [SDDM](https://github.com/sddm/sddm)                                                            |
+| :lipstick: **SDDM theme**              | [SDDM Chamber of Secrets theme](https://github.com/Carmoruda/sddm-hogwarts-themes)              |
+| :lock: **Lockscreen**                  | [i3lock color](https://github.com/Raymo111/i3lock-color)                                        |
+| :telescope: **Compositor**             | [Picom](https://github.com/yshui/picom)                                                         |
+| :shell: **Shell**                      | [Bash](https://www.gnu.org/software/bash/)                                                      |
+| :pencil2: **Text Editor**              | [Visual Studio Code](https://github.com/Microsoft/vscode), [Nano](https://www.nano-editor.org/) |
+| :file_folder: **File Manager**         | [Thunar](https://gitlab.xfce.org/xfce/thunar)                                                   |
+| :crystal_ball: **Icons**               | [Papirus Dark](https://github.com/PapirusDevelopmentTeam/papirus-icon-theme)                    |
+
+## :memo: Fonts
+
+## :art: Colorscheme
+
+Introducing the Queenhub colorscheme.
+
+Based on the Github colorscheme, itś a beautiful and elegant dark theme.
+
+This colorscheme is used for all aspects in these dotfiles.
+
+## :wave: Gallery
+
+## :check-mark: TODOs
+
+My TODOs or roadmap for my dotfiles.
+
+- [x] Change display manager to [SDDM](https://github.com/sddm/sddm)
+- [ ] Change [SDDM](https://github.com/sddm/sddm) theme to [SDDM Chamber of Secrets theme](https://github.com/Carmoruda/sddm-hogwarts-themes)
+- [ ] Customize Spotify notifications
+- [ ] Spotify ricing with [spicetify](https://github.com/spicetify/spicetify-cli)
+- [ ] Refactor for cleaner code
+- [ ] Change rofi colors to match the colorscheme
+- [ ] Firefox custom style
