@@ -22,8 +22,8 @@
 - [:gear: Config files](#gear-config-files)
 - [:memo: Fonts](#memo-fonts)
 - [:art: Colorscheme](#art-colorscheme)
-- [:wave: Gallery](#wave-gallery)
-- [:check-mark: TODOs](#check-mark-todos)
+- [:milky_way: Gallery](#milkyway-gallery)
+- [:check-mark: TODOs](#heavycheckmark-todos)
 
 ## [:notebook_with_decorative_cover: Wiki](https://github.com/Carmoruda/dotfiles/wiki)
 
@@ -59,9 +59,9 @@ Based on the Github colorscheme, itś a beautiful and elegant dark theme.
 
 This colorscheme is used for all aspects in these dotfiles.
 
-## :wave: Gallery
+## :milky_way: Gallery
 
-## :check-mark: TODOs
+## :heavy_check_mark: TODOs
 
 My TODOs or roadmap for my dotfiles.
 
@@ -70,5 +70,5 @@ My TODOs or roadmap for my dotfiles.
 - [ ] Customize Spotify notifications
 - [ ] Spotify ricing with [spicetify](https://github.com/spicetify/spicetify-cli)
 - [ ] Refactor for cleaner code
-- [ ] Change rofi colors to match the colorscheme
+- [x] Change rofi colors to match the colorscheme
 - [ ] Firefox custom style
