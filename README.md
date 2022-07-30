@@ -23,7 +23,7 @@
 - [:memo: Fonts](#memo-fonts)
 - [:art: Colorscheme](#art-colorscheme)
 - [:milky_way: Gallery](#milkyway-gallery)
-- [:check-mark: TODOs](#heavycheckmark-todos)
+- [:heavy_check_mark: TODOs](#heavycheckmark-todos)
 
 ## [:notebook_with_decorative_cover: Wiki](https://github.com/Carmoruda/dotfiles/wiki)
 
@@ -46,7 +46,7 @@ The wiki will guide you to replicate my dotfiles. Read the manual and follow the
 | :telescope: **Compositor**             | [Picom](https://github.com/yshui/picom)                                                         |
 | :shell: **Shell**                      | [Bash](https://www.gnu.org/software/bash/)                                                      |
 | :pencil2: **Text Editor**              | [Visual Studio Code](https://github.com/Microsoft/vscode), [Nano](https://www.nano-editor.org/) |
-| :file_folder: **File Manager**         | [Thunar](https://gitlab.xfce.org/xfce/thunar)                                                   |
+| :file_folder: **File Manager**         | [nnn](https://github.com/jarun/nnn)                                                             |
 | :crystal_ball: **Icons**               | [Papirus Dark](https://github.com/PapirusDevelopmentTeam/papirus-icon-theme)                    |
 
 ## :memo: Fonts
@@ -72,3 +72,7 @@ My TODOs or roadmap for my dotfiles.
 - [ ] Refactor for cleaner code
 - [x] Change rofi colors to match the colorscheme
 - [ ] Firefox custom style
+- [ ] Switch from nitrogen to feh
+- [ ] nnn configuration
+- [ ] Switch from nano to Neovim
+- [ ] Solve bash repo alias not working
