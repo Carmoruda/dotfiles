@@ -86,4 +86,4 @@ _open_files_for_editing() {
 ################################################################################
 
 ## Alias for dotfiles repos
-alias dotfiles=/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME
+alias dotfiles="git -C ~/.dotfiles"
