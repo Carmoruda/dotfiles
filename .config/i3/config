@@ -43,6 +43,10 @@ exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 # https://github.com/yshui/picom
 exec_always --no-startup-id picom -b
 
+# Star alternating layouts. See also
+# https://github.com/olemartinorg/i3-alternating-layout
+exec --no-startup-id $HOME/.config/scripts/alternating_layouts.py
+
 # The combination of xss-lock, nm-applet and pactl is a popular choice, so
 # they are included here as an example. Modify as you see fit.
 
@@ -86,8 +90,8 @@ bindsym $mod+w exec firefox
 bindsym F10 exec firefox
 
 # start file manager. See also
-# https://gitlab.xfce.org/xfce/thunar
-bindsym $mod+n exec thunar
+# https://github.com/jarun/nnn
+bindsym $mod+n exec kitty nnn
 
 # lock screen with i3lock. See also
 # https://github.com/i3/i3lock
