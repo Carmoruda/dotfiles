@@ -15,11 +15,11 @@ cpu=$($HOME/.config/rofi/bin/usedcpu)
 memory=$($HOME/.config/rofi/bin/usedram)
 
 # Options
-shutdown="⏻"
-reboot=""
-lock=""
-suspend=""
-logout=""
+shutdown="襤"
+reboot="勒"
+lock=""
+suspend="望"
+logout=" ﴚ "
 
 # Confirmation
 confirm_exit() {

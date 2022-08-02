@@ -12,11 +12,11 @@ rofi_command="rofi -theme $dir/apps.rasi"
 
 # Links
 terminal=""
-files=""
-editor=""
-browser=""
-music=""
-settings=""
+files=" ﱮ "
+editor=""
+browser=""
+music="阮"
+settings="漣"
 
 # Error msg
 msg() {

@@ -17,7 +17,7 @@ msg() {
 
 # Options
 screen=""
-area=""
+area=""
 window=""
 
 # Variable passed to rofi

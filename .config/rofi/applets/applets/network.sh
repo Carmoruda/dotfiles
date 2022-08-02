@@ -39,9 +39,9 @@ else
 fi
 
 ## Icons
-bmon=""
-launch_cli=""
-launch=""
+bmon=""
+launch_cli="漣"
+launch=""
 
 options="$connected\n$bmon\n$launch_cli\n$launch"
 

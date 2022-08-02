@@ -17,9 +17,9 @@ shuffle_status="$(playerctl shuffle)"
 
 # Defines the Play / Pause option content
 if [[ $playing_status == *"Playing"* ]]; then
-    play_pause=""
+    play_pause=""
 else
-    play_pause=""
+    play_pause="契"
 fi
 active=""
 urgent=""
@@ -43,7 +43,7 @@ else
 fi
 
 # Display if shuffle mode is on / off
-tog_shuffle="咽"
+tog_shuffle="列"
 if [[ $shuffle_status == *"On"* ]]; then
     shuffle_toggle="Off"
     [ -n "$active" ] && active+=",5" || active="-a 5"
@@ -55,9 +55,9 @@ elif [[ $shuffle_status == *"Off"* ]]; then
 else
     tog_shuffle="劣"
 fi
-stop=""
-next=""
-previous=""
+stop="栗"
+next="怜"
+previous="玲"
 
 
 # Variable passed to rofi

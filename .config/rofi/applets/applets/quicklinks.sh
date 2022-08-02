@@ -20,11 +20,11 @@ app="firefox"
 
 # Links
 duckduckgo=""
-twitch=""
-twitter=""
-github=""
-reddit=""
-youtube=""
+twitch="既"
+twitter="暑"
+github=""
+reddit="樓"
+youtube="輸"
 
 # Search
 search_duckduckgo() {
