@@ -46,7 +46,6 @@ The wiki will guide you to replicate my dotfiles. Read the manual and follow the
 | :telescope: **Compositor**             | [Picom](https://github.com/yshui/picom)                                                         |
 | :shell: **Shell**                      | [Bash](https://www.gnu.org/software/bash/)                                                      |
 | :pencil2: **Text Editor**              | [Visual Studio Code](https://github.com/Microsoft/vscode), [Nano](https://www.nano-editor.org/) |
-| :file_folder: **File Manager**         | [nnn](https://github.com/jarun/nnn)                                                             |
 | :crystal_ball: **Icons**               | [Papirus Dark](https://github.com/PapirusDevelopmentTeam/papirus-icon-theme)                    |
 
 ## :memo: Fonts
@@ -55,7 +54,7 @@ The wiki will guide you to replicate my dotfiles. Read the manual and follow the
 
 Introducing the Queenhub colorscheme.
 
-Based on the Github colorscheme, itś a beautiful and elegant dark theme.
+Based on the Github colorscheme, it's a beautiful and elegant dark theme.
 
 This colorscheme is used for all aspects in these dotfiles.
 
@@ -73,6 +72,5 @@ My TODOs or roadmap for my dotfiles.
 - [x] Change rofi colors to match the colorscheme
 - [ ] Firefox custom style
 - [ ] Switch from nitrogen to feh
-- [ ] nnn configuration
 - [ ] Switch from nano to Neovim
-- [ ] Solve bash repo alias not working
+- [x] Solve bash repo alias not working

@@ -45,11 +45,6 @@ bind '"\e[A":history-search-backward'
 bind '"\e[B":history-search-forward'
 
 ################################################################################
-## Some generally useful functions.
-## Consider uncommenting aliases below to start using these functions.
-##
-## October 2021: removed many obsolete functions. If you still need them, please look at
-## https://github.com/EndeavourOS-archive/EndeavourOS-archiso/raw/master/airootfs/etc/skel/.bashrc
 
 _open_files_for_editing() {
     # Open any given document file(s) for editing (or just viewing).
@@ -75,15 +70,20 @@ _open_files_for_editing() {
     echo "$FUNCNAME: package 'xdg-utils' or 'exo' is required." >&2
 }
 
-#------------------------------------------------------------
-
-## Aliases for the functions above.
-## Uncomment an alias if you want to use it.
-##
-
-# alias ef='_open_files_for_editing'     # 'ef' opens given file(s) for editing
-# alias pacdiff=eos-pacdiff
 ################################################################################
 
 ## Alias for dotfiles repos
 alias dotfiles="git -C ~/.dotfiles"
+
+## Alias for obsidian vault
+alias vault="git -C ~/Documents/Obsidian"
+
+## Alias for Readkerly repo
+alias readkerly="git -C ~/Documents/Code/Repos/Readkerly"
+
+
+################################################################################
+
+export CM_LAUNCHER='rofi'
+export EDITOR='nvim'
+export BROWSER='firefox'
