@@ -33,19 +33,19 @@ The wiki will guide you to replicate my dotfiles. Read the manual and follow the
 
 | Program                                | Name                                                                                            |
 | -------------------------------------- | ----------------------------------------------------------------------------------------------- |
-| :penguin: **OS**                       | [Endeavour OS](https://endeavouros.com/)                                                        |
+| :penguin: **OS**                       | [ArchLinux](https://wiki.archlinux.org/)                                                        |
 | :art: **Color Scheme**                 | [Queenhub](#art-colorscheme)                                                                    |
-| :rocket: **Window Manager**            | [i3](https://github.com/i3/i3)                                                                  |
-| :keyboard: **Terminal Emulator**       | [Kitty](https://github.com/kovidgoyal/kitty)                                                    |
-| :construction: **Bar**                 | [Polybar](https://github.com/polybar/polybar)                                                   |
+| :rocket: **Window Manager**            | [bspwm](https://github.com/baskerville/bspwm)                                                   |
+| :keyboard: **Terminal Emulator**       | [Allacrity](https://github.com/alacritty/alacritty)                                             |
+| :construction: **Tool Bar**            | [Polybar](https://github.com/polybar/polybar)                                                   |
 | :floppy_disk: **Application Launcher** | [Rofi](https://github.com/davatorium/rofi)                                                      |
 | :mega: **Notification Daemon**         | [Dunst](https://github.com/dunst-project/dunst)                                                 |
 | :key: **Display Manager**              | [SDDM](https://github.com/sddm/sddm)                                                            |
 | :lipstick: **SDDM theme**              | [SDDM Chamber of Secrets theme](https://github.com/Carmoruda/sddm-hogwarts-themes)              |
-| :lock: **Lockscreen**                  | [i3lock color](https://github.com/Raymo111/i3lock-color)                                        |
+| :lock: **Lockscreen**                  | [Betterlockscreen](https://github.com/betterlockscreen/betterlockscreen)                        |
 | :telescope: **Compositor**             | [Picom](https://github.com/yshui/picom)                                                         |
 | :shell: **Shell**                      | [Bash](https://www.gnu.org/software/bash/)                                                      |
-| :pencil2: **Text Editor**              | [Visual Studio Code](https://github.com/Microsoft/vscode), [Nano](https://www.nano-editor.org/) |
+| :pencil2: **Text Editor**              | [Visual Studio Code](https://github.com/Microsoft/vscode), [Vim](https://www.vim.org/)          |
 | :crystal_ball: **Icons**               | [Papirus Dark](https://github.com/PapirusDevelopmentTeam/papirus-icon-theme)                    |
 
 ## :memo: Fonts
